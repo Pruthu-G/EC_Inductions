@@ -18,7 +18,7 @@ You will now need to setup your git, by configuring your username and email id, 
 
 Clone this repository onto your systems using the following command 
 ```bash
-git clone https://github.com/Electronics-and-Controls-25/Inductions.git 
+git clone https://github.com/Pruthu-G/EC_Inductions.git
 ```
 And you will find a folder named _Inductions_ in the directory where you ran it. 
 
