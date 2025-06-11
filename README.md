@@ -20,7 +20,7 @@ Clone this repository onto your systems using the following command
 ```bash
 git clone https://github.com/Pruthu-G/EC_Inductions.git
 ```
-And you will find a folder named _Inductions_ in the directory where you ran it. 
+And you will find a folder named _EC_Inductions_ in the directory where you ran it. 
 
 Now, create a branch with the name of the folling format : **<first_name>_<last_name>** 
 ```bash
