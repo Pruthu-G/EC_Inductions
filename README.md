@@ -22,6 +22,8 @@ git clone https://github.com/Pruthu-G/EC_Inductions.git
 ```
 And you will find a folder named _EC_Inductions_ in the directory where you ran it. 
 
+now change your directory to this folder using the ```cd``` command
+
 Now, create a branch with the name of the folling format : **<first_name>_<last_name>** 
 ```bash
 git branch <first_name>_<last_name>
