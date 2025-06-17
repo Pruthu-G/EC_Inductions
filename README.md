@@ -46,6 +46,9 @@ After you have let git know your branch of choice using the ``` -u ``` tag, you 
 >💡 Tip : **It is always good to make sure that you are in the current branch, use ```git branch``` to verify, always**
 ---
 
+mic check
+
+
 
 
 
