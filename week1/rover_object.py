@@ -39,16 +39,15 @@ class Map:
         height (int): Height of the map.
         grid (list of list of Position): The map grid.
     """
-    def __init__(self,map_to_traverse=None):
+    def __init__(self,map_to_traverse):
         """
         Initializes the map from a 2D list of 1s/True (traversable) and 0s/False (blocked).
 
         Args:
             map_to_traverse (list of list of int): Binary matrix representing the map.
         """
-        self.width = np.array(map_to_traverse).shape[1]
-        self.height = np.array(map_to_traverse).shape[0]
-        self.grid = [[Position(x, y, map_to_traverse[y][x] if map_to_traverse else True) for x in range(self.width)] for y in range(self.height)]
+        self.map_to_traverse = map_to_traverse
+        self.grid = [[Position(x, y, self.map_to_traverse[y][x] if self.map_to_traverse else True) for x in range(len(self.map_to_traverse[y]))] for y in range(len(self.map_to_traverse))]
     
     def is_valid_position(self,x,y):
         """
@@ -61,7 +60,10 @@ class Map:
         Returns:
             bool: True if the position is valid and traversable.
         """
-        return 0<=x<self.width and 0<=y<self.height and self.grid[y][x].traversable
+        if 0 <= y < len(self.map_to_traverse):
+            if 0 <= x < len(self.map_to_traverse[y]):
+                return self.grid[y][x].traversable
+        return False
 
     def get_position(self,x,y):
         """
@@ -165,15 +167,15 @@ class Rover:
 if __name__ == '__main__':
 
     traversable_map = [
-        [1, 1, 1, 0],
-        [1, 0, 1, 1],
+        [1, 1, 0, 0],
+        [1, 0, 1, 1, 1],
         [1, 1, 1, 1],
     ]
 
     my_map = Map(traversable_map)
     rover = Rover(my_map.get_position(0,0))
 
-    target = my_map.get_position(3,2)
+    target = my_map.get_position(4,1)
 
     print("Steps taken:",rover.traverse(target, my_map))
     rover.get_info()
