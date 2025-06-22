@@ -10,8 +10,8 @@ traversable or not.
     Attributes:
         x: Row index
         y: Column index
-        traversable: 1 = traversable, 0 = blocked
-    """
+        traversable: 1 = traversable, 0 = not traversable
+     """
     def __init__(self, x, y, traversable=1):
         self.x = x
         self.y = y
