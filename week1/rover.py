@@ -154,11 +154,6 @@ class Rover:
         # Target not reachable
         return -1
 
-
-
-
-
-
 def main():
     """
     main function i used to test my code.
@@ -232,15 +227,6 @@ def main():
     #m.set_nontraversible(7, 1)     
     m.set_nontraversible(6, 2)
     m.set_nontraversible(8, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
-    m.set_nontraversible(0, 0)
     m.set_nontraversible(0, 0)
 
     start = m.grid[3][1]
